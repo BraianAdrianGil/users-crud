@@ -1,0 +1,185 @@
+.form__container {
+  scale: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(84, 81, 81, 0.505);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  overflow-y: auto;
+  padding: 10px;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+.form__container.show {
+  scale: 1;
+  transition: 0.5s ease;
+}
+
+.form {
+  width: 100%;
+  position: relative;
+  background: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  max-width: 400px;
+  gap: 1.2rem;
+}
+
+.form > button:first-of-type {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form > button:first-of-type:hover {
+  background: rgba(128, 128, 128, 0.288);
+  transform: scale(1.1);
+}
+
+.form > button:first-of-type:active {
+  transform: scale(0.8);
+}
+
+.form__label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.form__label input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.405);
+}
+
+.form__label input:hover {
+  box-shadow: 0px 0px 0px 6px rgba(143, 142, 195, 0.33);
+}
+
+.form__label input:focus {
+  outline: 2px solid orange;
+}
+
+.input__password__container {
+  position: relative;
+}
+
+.input__password__container input {
+  width: 100%;
+}
+
+.input__password__container button {
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.input__password__container button:hover {
+  background: rgba(128, 128, 128, 0.439);
+}
+
+.error__form__message {
+  opacity: 0;
+  height: 20px;
+  color: rgba(255, 0, 0, 0.621);
+  transition: 0.5s ease;
+}
+
+.error__form__message.active {
+  opacity: 1;
+}
+
+.error__input {
+  animation: shake 0.5s ease;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(5px);
+  }
+  20%,
+  60% {
+    transform: translateX(-5px);
+  }
+  40%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.form__button__submit {
+  width: 100%;
+  height: 30px;
+  background: rgb(80, 80, 130);
+  color: white;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.form__button__submit:active {
+  transform: scale(0.95);
+}
+
+.input__file__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.input__file__container label {
+  width: 167px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.input__file__container label input {
+  overflow: hidden;
+  width: 135px;
+}
+
+.img__container {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 120px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image__label {
+  font-size: 14px;
+}
+
+.img__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

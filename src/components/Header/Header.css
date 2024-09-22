@@ -1,0 +1,47 @@
+.header {
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(50px);
+  transition: all 0.5s;
+}
+
+/* .header.sticky {
+  position: sticky;
+  top: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  transition: all 0.5s;
+  box-shadow: 1px 1px 5px 2px rgba(82, 78, 78, 0.652);
+} */
+
+.header__nav {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__button {
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  background: rgb(80, 80, 130);
+  align-self: end;
+  border-radius: 2px;
+  transition: 0.2s ease;
+}
+
+.nav__button span {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: -1px;
+}
+
+.nav__button:hover {
+  transform: scale(1.05);
+}
+
+.nav__button:active {
+  transform: scale(0.9);
+}

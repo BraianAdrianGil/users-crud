@@ -1,0 +1,158 @@
+.card__container {
+  position: relative;
+  min-width: 280px;
+  max-width: 280px;
+  height: 100%;
+  padding: 12px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.446);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.card__item__header__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card__item__header__container .card__name {
+  margin-left: 1.5rem;
+}
+.card__item__header__container span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.card__item__header__container span img {
+  width: 100%;
+  object-fit: cover;
+}
+.card__list__container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+.card__item {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  max-width: 90%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 3px;
+}
+.card__item::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.card__item::-webkit-scrollbar-track {
+  background: #c9cbd0f8;
+  border-radius: 10px;
+}
+.card__item::-webkit-scrollbar-thumb {
+  background: #aaa5e2;
+  border-radius: 10px;
+}
+.card__item__icon__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__item__icon__container svg {
+  width: 20px;
+  height: 20px;
+}
+.card__buttons__container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+.card__buttons__container button {
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.card__buttons__container button:first-of-type {
+  background: rgb(226, 177, 112);
+}
+.card__buttons__container button:last-of-type {
+  background: rgb(239, 90, 90);
+}
+.card__buttons__container button svg {
+  height: 18px;
+  width: 22px;
+}
+.card__buttons__container button:hover {
+  transform: scale(1.1);
+}
+.card__buttons__container button:active {
+  transform: scale(0.9);
+}
+.delete__modal {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  padding-top: 2rem;
+  background-color: white;
+  text-align: center;
+}
+.delete__modal img {
+  width: 40px;
+  margin-bottom: 1rem;
+}
+.delete__modal p:first-of-type {
+  margin: 0 auto;
+  max-width: 200px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-wrap: pretty;
+}
+.delete__modal p:last-of-type {
+  font-style: oblique;
+}
+.delete__modal__buttons__container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.delete__modal__buttons__container button {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  transition: 0.3s ease;
+  background: red;
+  width: 70px;
+  height: 25px;
+  cursor: pointer;
+}
+.delete__modal__buttons__container button:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+.delete__modal__buttons__container button:active {
+  transform: scale(0.9);
+  transition: 0.3s ease;
+}
+.delete__modal__buttons__container button:first-child {
+  background: rgb(239, 90, 90);
+  color: white;
+}
+.delete__modal__buttons__container button:last-child {
+  background: rgb(226, 177, 112);
+  color: white;
+}
