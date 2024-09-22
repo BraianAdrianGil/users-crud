@@ -72,7 +72,7 @@ const UserCard = ({ user, handleDeleteUser }) => {
 
 			{showDeleteModal && (
 				<div className="delete__modal">
-					<img src="/src/assets/img/question-mark.png" alt="Question mark" />
+					<img src="src/assets/img/question-mark.png" alt="Question mark" />
 					<p>Estas seguro de eliminar a este usuario ?</p>
 					<p>Este cambio es irreversible</p>
 					<div className="delete__modal__buttons__container">
