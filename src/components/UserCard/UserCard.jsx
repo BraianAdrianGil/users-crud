@@ -7,6 +7,7 @@ import {
 	PadLockIcon,
 	TrashIcon,
 } from "../Icons/Icons";
+import questionMarkImage from "../../assets/img/question-mark.png";
 import "./UserCard.css";
 
 const UserCard = ({ user, handleDeleteUser }) => {
@@ -23,9 +24,9 @@ const UserCard = ({ user, handleDeleteUser }) => {
 	const year = date.getFullYear();
 	const userBirthdayFormatted = `${day}-${month}-${year}`;
 
-	const handleDelete = () => {
+	const handleDelete = (id) => {
 		setShowDeleteModal(!showDeleteModal);
-		handleDeleteUser(user.id);
+		handleDeleteUser(id);
 	};
 
 	return (
@@ -72,7 +73,7 @@ const UserCard = ({ user, handleDeleteUser }) => {
 
 			{showDeleteModal && (
 				<div className="delete__modal">
-					<img src="src/assets/img/question-mark.png" alt="Question mark" />
+					<img src={questionMarkImage} alt="Question mark" />
 					<p>Estas seguro de eliminar a este usuario ?</p>
 					<p>Este cambio es irreversible</p>
 					<div className="delete__modal__buttons__container">
